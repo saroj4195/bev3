@@ -29,19 +29,26 @@ class DayBookingSetupController extends Controller
     $data = $request->all();
 
     $hotel_details = HotelInformation::where('hotel_id',$hotel_id)->select('other_info')->first();
-    //dd($hotel_details);
     if(isset($hotel_details->other_info)){
         $details = json_decode($hotel_details->other_info);
         if(!empty($details)){
+
+          if($hotel_id == 2600){
+            $details->bookable_unit_name = $data['bookable_unit_name'];
+          }
+
           $details->package_menu_name = $data['package_menu_name'];
           $other_details = json_encode($details);
+        
         }else{
           $details['package_menu_name'] = $data['package_menu_name'];
           $other_details = json_encode($details);
         }
+        
        
     }else{
         $package_menu_name = $data['package_menu_name'];
+        // $bookable_unit_name = $data['bookable_unit_name'];
         $other_details = json_encode($package_menu_name);
     }
    
