@@ -46,7 +46,7 @@ if (!function_exists('config_path')) {
      }
      if (!function_exists('captureHotelActivityLog')) {
 
-          function captureHotelActivityLog($hotel_id, $user_id, $activity_id, $activity_name = '', $activity_description, $activity_from)
+          function captureHotelActivityLog($hotel_id, $user_id, $activity_id,$activity_name, $activity_description, $activity_from)
           {
                try {
                     $activity_list = array(

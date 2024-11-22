@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: be-alpha
+    ports:
+      - "8003:8003"
+    volumes:
+      - .:/var/www
+    working_dir: /var/www
+    command: php -S 0.0.0.0:8003 -t .
+    env_file:
+      - .env
