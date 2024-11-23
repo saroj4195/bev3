@@ -15,8 +15,6 @@ use Illuminate\Foundation\Application;
 */
 
 $router->get('/', function () use ($router) {
-    // return $router->app->version();
-
     return app()->version();
 });
 //Hotel User Registration Route
