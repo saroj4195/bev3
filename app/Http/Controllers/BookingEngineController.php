@@ -6128,7 +6128,7 @@ class BookingEngineController extends Controller
 
         $be_notifications = Notifications::select('id', 'hotel_id', 'content_html')->where('is_active', '1')->where('hotel_id', $hotel_id)->first();
 
-        $res = array('status' => 1, 'message' => 'Retrieved successfully', 'be_notifications' => $be_notifications);
+        $res = array('status' => 1, 'message' => 'Retrieved successfully', 'be_notifications' => $be_notifications,'notification_status' => 1);
         return response()->json($res);
     }
 
