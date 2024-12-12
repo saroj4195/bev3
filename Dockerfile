@@ -24,7 +24,7 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 
 # Expose port if needed (optional, e.g., for PHP development server)
-EXPOSE 8003
+EXPOSE 8000
 
 # Command to run the application
-CMD ["php", "-S", "0.0.0.0:8003", "-t", "."]
+CMD ["php", "-S", "0.0.0.0:8000", "-t", "."]
