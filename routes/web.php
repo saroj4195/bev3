@@ -17,7 +17,7 @@ use Illuminate\Foundation\Application;
 $router->get('/', function () use ($router) {
     // return $router->app->version();
 
-    return app()->version();
+    return "dibya";
 });
 //Hotel User Registration Route
 $router->post('/hotel_users/register', ['uses' => 'CompanyRegistrationController@registerHotelAdmin']);
