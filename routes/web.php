@@ -15,7 +15,7 @@ use Illuminate\Foundation\Application;
 */
 
 $router->get('/', function () use ($router) {
-    return "Hello";
+    return "HI";
 });
 //Hotel User Registration Route
 $router->post('/hotel_users/register', ['uses' => 'CompanyRegistrationController@registerHotelAdmin']);
