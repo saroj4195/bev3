@@ -5,9 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: be-alpha
+    container_name: be-alpha-test
     ports:
-      - "8003:8003"
+      - "8009:8009"
     volumes:
       - .:/var/www
     working_dir: /var/www
